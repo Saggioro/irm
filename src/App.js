@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Card, Button, Form, Col} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/global.css';
 
 function App() {
   return (
+  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form>
+        <Card>
+          <Card.Header>
+            <Card.Title>
+              Cadastro
+
+            </Card.Title>
+          </Card.Header>
+          <Card.Body>
+            
+              <Form.Group>
+                <Form.Label column sm="4">
+                  Nome
+                </Form.Label>
+                <Col sm="6" >
+                 <Form.Control placeholder="Escreva"/>
+                </Col>
+                <Button>
+                  Clique aqui
+                </Button>
+              </Form.Group>
+            
+          </Card.Body>
+        </Card>
+      </Form>
     </div>
-  );
+);
 }
 
 export default App;
